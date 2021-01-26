@@ -38,4 +38,4 @@ Then, the Docker container can be launched with the following command:
 docker-compose up
 ```
 
-The server should be responding at 127.0.0.1:8000
+The server should be responding at `http://localhost:8000`

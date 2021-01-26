@@ -41,7 +41,7 @@ The server should be responding at `http://localhost:8000`
 
 
 ## Admin Login
-When you run migrate, a superuser is created.
+During migration a superuser is created.
 ```bash
 username: admin
 password: admin123

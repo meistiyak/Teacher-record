@@ -6,14 +6,14 @@ A Django application to store teacher record
 It is best to use the python `virtualenv` tool to build locally:
 
 ```bash
-> virtualenv env
+> git clone https://github.com/meistiyak/Teacher-record.git
+> cd Teacher-record
+> virtualenv env -p python3
 > source env/bin/activate
-> git clone https://github.com/meistiyak/Teacher-record.git .
 ```
-Then you navigate to the base directory of the project and install the requirements in your virtual environment
+Then install the requirements in your virtual environment
 
 ```bash
-> cd Teacher-record
 > pip install -r requirements.txt
 ```
 And finally apply the migrations and run the server

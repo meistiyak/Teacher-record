@@ -46,3 +46,5 @@ username: admin
 password: admin123
 ```
 
+## License
+[MIT](https://choosealicense.com/licenses/mit/)

@@ -37,5 +37,11 @@ Then, the Docker container can be launched with the following command:
 ```bash
 docker-compose up
 ```
-
 The server should be responding at `http://localhost:8000`
+
+
+## Admin Login
+When you run migrate, a superuser is created.
+```bash
+username: admin
+password: admin123

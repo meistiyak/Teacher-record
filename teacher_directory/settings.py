@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'widget_tweaks',
     'core',
+    'user',
     'dashboard',
     'teachers'
 ]

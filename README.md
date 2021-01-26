@@ -1,6 +1,9 @@
 # Teacher-record
 A Django application to store teacher record
 
+## Want to Use?
+You can clone this branch and use it right now using any of the methods mentioned below
+
 ## Building
 
 It is best to use the python `virtualenv` tool to build locally:

@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}Teachers{% endblock title %}
+
+{% block breadcrumb %}
+<a class="btn btn-primary" href="{% url 'teacher-create' %}"><i
+    class="fas fa-plus"></i> New teacher</a>
+<a class="btn btn-primary" href="{% url 'teacher-upload' %}"><i
+    class="fas fa-upload"></i> Upload teachers</a>
+{% endblock breadcrumb %}
+
+{% block content %}
+  <div class="table-responsive">
+    <table id="teacher_table" class="table table-bordered table-hover" data-page-length='100'>
+      <thead class="thead-light">
+        <tr>
+          <th>S/N</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Phone Number</th>
+          <th>Room Number</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        {% for teacher in teachers %}
+          <tr class='clickable-row' data-href="{% url 'teacher-detail' teacher.id %}">
+            <td>{{ forloop.counter}}</td>
+            <td>
+                {% if teacher.first_name %}{{ teacher.first_name }}{% endif %}
+            </td>
+            <td>
+                {% if teacher.last_name %}{{ teacher.last_name }}{% endif %}
+            </td>
+            <td>
+                {% if teacher.email %}{{ teacher.email }}{% endif %}
+            </td>
+            <td>
+                {% if teacher.phone %}{{ teacher.phone }}{% endif %}
+            </td>
+            <td>
+                {% if teacher.room_no %}{{ teacher.room_no }}{% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+
+      </tbody>
+    </table>
+  </div>
+{% endblock content %}
+
+
+{% block morejs %}
+<script>
+  $('#teacher_table').DataTable({
+  });
+</script>
+
+{% endblock morejs %}

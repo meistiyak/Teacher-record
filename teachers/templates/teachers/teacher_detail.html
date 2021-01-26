@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content-header %}
+<div class="card-header">
+  <div class="card-tools">
+{#    <a href="#" class="btn btn-tool">Print</a>#}
+    <a href="{% url 'teacher-update' object.id %}" class="btn btn-tool">
+      <i class="fas fa-edit"></i>
+    </a>
+    <a href="{% url 'teacher-delete' object.id %}" class="btn btn-tool">
+      <i class="fas fa-times"></i>
+    </a>
+  </div>
+</div>
+{% endblock content-header %}
+
+{% block content %}
+    <div class="row mb-4">
+        <div class="col-sm-1"></div>
+          <div class="col-sm-3">
+            <div class="row mb-2">
+
+              {% if object.avatar %}
+                <img
+                  src="{{ object.avatar.url }}"
+                  class="float-left rounded-circle mr-3" style="width: 120px; height: 120px;">
+              {% else %}
+                <img
+                  src="{% static 'dist/img/avatar.png' %}"
+                  class="float-left rounded-circle mr-3" style="width: 120px; height: 120px;">
+              {% endif %}
+            </div>
+            <h5>{{ object.first_name }} {{ object.last_name }}</h5>
+
+          </div>
+          <div class="col-sm-7">
+            <div>
+              <div class="form-group border-bottom row">
+                <label class="col">
+                  Email Address
+                </label>
+                <div class="col">
+                    {% if object.email %}{{ object.email }}{% endif %}
+                </div>
+              </div>
+
+              <div class="form-group border-bottom row">
+                <label class="col">
+                  Phone Number
+                </label>
+                <div class="col">
+                  {% if object.phone %}{{ object.phone }}{% endif %}
+                </div>
+              </div>
+
+              <div class="form-group border-bottom row">
+                <label class="col">
+                  Room Number
+                </label>
+                <div class="col">
+                  {% if object.room_no %}{{ object.room_no }}{% endif %}
+                </div>
+              </div>
+              <div class="form-group border-bottom row">
+                <label class="col">
+                  Subject taught
+                </label>
+                <div class="col">
+                  {% if object.subject_taught %}{{ object.subject_taught }}{% endif %}
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        <div class="col-sm-1"></div>
+    </div>
+
+
+
+{% endblock content %}

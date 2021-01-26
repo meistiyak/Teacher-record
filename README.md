@@ -16,9 +16,8 @@ Then you navigate to the base directory of the project and install the requireme
 > cd Teacher-record
 > pip install -r requirements.txt
 ```
-And finally you make migrations to the database, and run the server
+And finally apply the migrations and run the server
 ```bash
-> python manage.py makemigrations
 > python manage.py migrate
 > python manage.py runserver
 ```

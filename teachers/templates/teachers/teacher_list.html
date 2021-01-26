@@ -20,6 +20,7 @@
           <th>Email</th>
           <th>Phone Number</th>
           <th>Room Number</th>
+          <th>Subjects taught</th>
         </tr>
       </thead>
       <tbody>
@@ -41,6 +42,9 @@
             </td>
             <td>
                 {% if teacher.room_no %}{{ teacher.room_no }}{% endif %}
+            </td>
+            <td>
+                {% if teacher.subject_taught %}{{ teacher.subject_taught }}{% endif %}
             </td>
           </tr>
         {% endfor %}
